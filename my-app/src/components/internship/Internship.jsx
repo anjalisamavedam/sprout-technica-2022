@@ -14,13 +14,16 @@ const Internship = () => {
 
         ]
     };
+
+    const cards = jobs.map((job) => <JobCard job={job} />);
+    
     return (
-        
-        
+          
         <div>
+            <p>test</p>
             <SearchBar onChange={(e) => { setInputValue(e.target.value) }} />
             <div>
-
+                {cards}
             </div>
         </div>
     );

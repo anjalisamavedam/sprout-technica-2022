@@ -2,6 +2,10 @@
   text-align: left;
   margin-top: 50px;
   margin-left: 62px;
+
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1.3rem;
+  color:#9f8f71;
 }
 
 .finlit {
@@ -12,7 +16,7 @@
 .carousel-card {
   word-wrap: break-word;
   width: 300px;
-  border: 1px solid;
+  border: 1px solid #9f8f71;;
   padding: 10px;
 
 }

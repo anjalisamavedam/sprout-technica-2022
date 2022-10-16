@@ -58,3 +58,13 @@ input[type=submit] {
     right: 10px;
     bottom: 10px;
 }
+
+.submit :hover{
+    cursor: pointer;
+}
+
+.matching-blurb {
+    width: 900px;
+    margin-left: 16%;
+  }
+  

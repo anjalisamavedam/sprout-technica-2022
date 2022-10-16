@@ -1,5 +1,5 @@
 import "./Navbar.css";
-// import image from '../img/sproutLogo.PNG';
+import React from 'react';
 
 function Navbar() {
     return (

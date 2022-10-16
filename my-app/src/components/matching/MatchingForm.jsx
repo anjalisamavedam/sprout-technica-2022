@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Matched from './Matched'
 
 class MatchingForm extends React.Component {
     constructor(props) {
@@ -13,7 +13,9 @@ class MatchingForm extends React.Component {
             phoneNum: '',
             careerArea: '',
             interests: '',
-            role: ''
+            role: '',
+            matched: false,
+            profile: {}
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,6 +28,17 @@ class MatchingForm extends React.Component {
         this.setInterests = this.setInterests.bind(this);
         this.setRole = this.setRole.bind(this);
         this.setJob = this.setJob.bind(this);
+        this.setMatched = this.setMatched.bind(this);
+        this.setProfile = this.setProfile.bind(this);
+    }
+
+    setProfile(match) {
+        this.setState({profile: match})
+    }
+
+
+    setMatched() {
+        this.setState({matched: true})
     }
 
     setName(event) {
@@ -82,56 +95,75 @@ class MatchingForm extends React.Component {
         };
         fetch('http://127.0.0.1:5000/add_user', requestOptions)
             .then(response => response.json())
-            .then(data => this.setState({ postId: data.id }));
-            event.preventDefault();
+            .then(data => this.setProfile(data["match"]));
+
+        this.setMatched()
+        
+        
+        console.log(this.state)
+        event.preventDefault();
     }
 
     render() {
-        return (
-            <div class="formcontainer">
-                <div class="title">Matching Form</div>
-                <form onSubmit={this.handleSubmit}>
-                    <div> 
-                        <label>Role: </label>
-                        <input type="radio" name="role" value="mentor" onChange={this.setRole}/>
-                        <label>Mentor</label>
-                        <input type="radio" name="role" value="mentee" onChange={this.setRole}/> 
-                        <label>Mentee</label>
-                    </div>
-                    <div> 
-                        <label>Name: </label>
-                        <input type="text" value={this.state.name} onChange={this.setName} />
-                    </div>
-                    
-                    <div> 
-                        <label>Location: </label>
-                        <input type="text" value={this.state.location} onChange={this.setLocation} />
-                    </div>
-                    <div> 
-                        <label>Career Area: </label>
-                        <input type="text" value={this.state.careerArea} onChange={this.setCareerArea} />
-                    </div>
-                    <div> 
-                        <label>Job: </label>
-                        <input type="text" value={this.state.job} onChange={this.setJob} />
-                    </div>
-                    <div> Pronouns: 
-                      <input type="text" value={this.state.pronouns} onChange={this.setPronouns} />
-                    </div>
-                    <div> Email: 
-                      <input type="text" value={this.state.email} onChange={this.setEmail} />
-                    </div>
-                    <div> Phone Number: 
-                      <input type="text" value={this.state.phoneNum} onChange={this.setPhoneNum} />
-                    </div>
-                    <div> Interests: 
-                      <input type="text" value={this.state.interests} onChange={this.setInterests} />
-                    </div>
-                    <input type="submit" value="Submit" />
-                </form>
-            </div>
-          
-        );
+        if (this.state.matched) {
+            if (this.state.profile == "none") {
+                return (<Matched message="not found"/>);
+            }
+            if (this.state.role == "mentee"){
+                return (<Matched message="found" role="mentor" name={this.state.profile.name} phoneNumber={this.state.profile.phone}/>);
+            } else {
+                return (<Matched role="mentee" name={this.state.profile.name} phoneNumber={this.state.profile.phone}/>);
+            }
+                
+        } else {
+
+        
+            return (
+                <div class="formcontainer">
+                    <div class="title">Matching Form</div>
+                    <form onSubmit={this.handleSubmit}>
+                        <div> 
+                            <label>Role: </label>
+                            <input type="radio" name="role" value="mentor" onChange={this.  setRole}/>
+                            <label>Mentor</label>
+                            <input type="radio" name="role" value="mentee" onChange={this.  setRole}/> 
+                            <label>Mentee</label>
+                        </div>
+                        <div> 
+                            <label>Name: </label>
+                            <input type="text" value={this.state.name} onChange={this.setName} />
+                        </div>
+                        <div> Pronouns: 
+                          <input type="text" value={this.state.pronouns} onChange={this.    setPronouns} />
+                        </div>
+                        <div> 
+                            <label>Location: </label>
+                            <input type="text" value={this.state.location} onChange={this.  setLocation} />
+                        </div>
+                        <div> 
+                            <label>Career Area: </label>
+                            <input type="text" value={this.state.careerArea} onChange={this.    setCareerArea} />
+                        </div>
+                        <div> 
+                            <label>Job: </label>
+                            <input type="text" value={this.state.job} onChange={this.setJob} />
+                        </div>
+                        
+                        <div> Email: 
+                          <input type="text" value={this.state.email} onChange={this.setEmail} />
+                        </div>
+                        <div> Phone Number: 
+                          <input type="text" value={this.state.phoneNum} onChange={this.    setPhoneNum} />
+                        </div>
+                        <div> Interests: 
+                          <input type="text" value={this.state.interests} onChange={this.   setInterests} />
+                        </div>
+                        <input type="submit" value="Submit" />
+                    </form>
+                </div>
+
+            );
+        }
     }
 }
 

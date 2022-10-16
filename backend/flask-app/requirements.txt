@@ -1,0 +1,5 @@
+flask
+careerjet_api_client
+Flask-PyMongo
+pymongo
+flask_cors

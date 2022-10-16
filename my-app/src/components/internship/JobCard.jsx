@@ -15,7 +15,7 @@ const JobCard = (props) => {
             { title: 'Three', value: 20, color: '#6A2135' },
           ]}
         />
-        <p>48% of employees at {props.company} are women.</p>
+        <p className='percentage'>48% of employees at {props.company} are women.</p>
 
       </div>
 

@@ -93,13 +93,14 @@ class HousingForm extends React.Component {
             .then(response => response.json())
             .then(data => this.setResult(data["result"]));
 
-        console.log(this.state)
+        // console.log(this.state.result)
+        // console.log(this.state)
 
         event.preventDefault();
     }
 
     render() {
-        if (this.state.result != "") {
+        if (this.state.result !== "") {
            return (<Housing result={this.state.result}/>)
 
         } else {
@@ -137,7 +138,7 @@ class HousingForm extends React.Component {
                           <input type="text" value={this.state.mortgagePayment} onChange={this.setMortgagePayment} />
                         </div>
                         <div>Credit Score: 
-                          <input type="text" value={this.state.creditScore} onChange={this.creditScore} />
+                          <input type="text" value={this.state.creditScore} onChange={this.setCreditScore} />
                         </div>
                         <input type="submit" value="Submit" />
                     </form>

@@ -212,12 +212,106 @@ def match(mentee, email):
             "status": "ok",
             "match": {
                 "name": match_profile['name'],
-                "phone": match_profile['phoneNumber']
+                "phone": match_profile['phoneNumber'],
+                "interests": match_profile['interests'],
+                "job": match_profile['job']
             }
         
         }
     
     return { "status": "match not found", "match": "none"}
+
+
+
+
+@app.route('/housing', methods=['POST'])
+@cross_origin()
+def housingEval():
+
+
+    
+    content_type = request.headers.get('Content-Type')
+
+    toReturn = []
+
+    # If a form is submitted
+    if request.method == "POST":
+        data = request.json
+        CreditScore = data["creditScore"]
+        LTV = float(data["loanAmount"]) / float(data["appraisedValue"])
+        totDebt = float(data["cardPayment"]) + float(data["carPayment"]) + float(data["mortgagePayment"])
+        DTI = totDebt / float(data["monthlyIncome"])
+        FEDTI = float(data["mortgagePayment"]) / float(data["monthlyIncome"])
+    
+        details = ""
+
+        # check credit score
+        if(int(CreditScore) < 640):
+            details += "1"   # no
+            toReturn.append("We encourage you to consider techniques in raising your credit score. Pay down your revolving credit balances. If you have the funds to pay more than your minimum payment each month, you should do so. New habits to consider include to increase your credit limit and to check your credit report for errors. Also, ask to have negative entries that are paid off removed from your credit report.")
+        else:
+            details += "2"   # yes
+            toReturn.append("Your credit score is acceptable, if not stellar. Continue to  increase your credit limit and to check your credit report for errors. Also, ask to have negative entries that are paid off removed from your credit report.")
+
+        # check LTV
+        if float(LTV) > 0.95:
+            details += "3"   # no
+            toReturn.append("Your LTV score is too high. In essence, increasing the amount of your down payment lowers the total amount of money that you're asking to borrow, which automatically lowers your LTV. Make a larger down payment. Saving for a big down payment may test your patience if you're really eager to get into a house or car, but it can be worth it in the long run.")
+        elif float(LTV) < 0.80:
+            details += "5"   # yes
+            toReturn.append("Your LTV score is excellent. Continue to set your sights on affordable targets that are within the scope of your budget, income, and debt.")
+        else:
+            details += "4"   # maybe
+            toReturn.append("Your LTV score is acceptable, but could be improved to lower interest rates. Set your sights on more affordable targets. Consider PMI (Private mortgage insurance), which is a type of mortgage insurance you might be required to pay for if you have a conventional loan. Like other kinds of mortgage insurance, PMI protects the lender—not you—if you stop making payments on your loan.")
+
+        # check DTI
+        if float(DTI) > 0.43:
+            details += "6"   # no - can lower DTI by transfer high interest loans to a low interest credit card although having too many credit cards can also negatively impact your ability to purchase a home
+            toReturn.append("Your DTI is too high. Consider lowering your DTI by transfering high interest loans to a low interest credit card. Consider the fact that this may negatively impact home buying power. In all, avoid taking on more debt.")
+        elif float(DTI) <= 0.36:
+            toReturn.append("Your DTI score is superb. Continue to recalculate your debt-to-income ratio monthly to ensure your position.")
+            details += "8"   # yes -
+        else: 
+            details += "7"   # maybe
+            toReturn.append("Your DTI score is decent, but could use active improvement. Increase the amount you pay monthly toward your debt. Extra payments can help lower your overall debt more quickly.")
+
+        # check FEDTI
+        if float(FEDTI) > 0.28:
+            details += "9"   # no
+            toReturn.append("Your FEDTI score is too high. Some of the best ways to improve debt-to-income ratio include paying down revolving or installment debts, reducing housing costs, and increasing income. A lower DTI can increase the amount of home you may be able to afford when qualifying to mortgage a property.")
+        else:
+            details += "0"   # yes
+            toReturn.append("Your FEDTI score is great. Continue to exercise responsible financial habits.")
+
+
+        ## DETERMINE FINAL EVAL - YES/ POSSIBLY/ MAYBE / NO
+        eval = 0
+
+        #no
+        if "1" in details and "3" in details and "6" in details and "9" in details:
+            eval = 0
+            toReturn.append("You would not be approved to secure a home loan at this time.")
+        # definitely yes
+        elif "2" in details and "5" in details and "8" in details and "0" in details:
+            eval = 1
+            toReturn.append("You would be approved to secure a home loan at this time. Congrats!")
+        # maybe yes
+        elif "2" in details and "4" in details and "4" in details and "0" in details:
+            eval = 2
+            toReturn.append("\You would be approved to secure a home loan at this time, but your interest rates may be high. Consider improving your finances with the above advice.")
+        # maybe
+        else:
+            eval = 3
+            toReturn.append("You may or may not be approved to secure a home loan at this time with a favorable interest rate. We encourage you to take time to reorganize your finances and better understand opportunities for improvement.")
+
+        result_json = json.dumps(toReturn)
+
+
+
+        # Put inputs to dataframe
+        #X = pd.DataFrame([[height, weight]], columns = ["Height", "Weight"])
+        
+    return {"result": result_json}
 
 
 if __name__ == "__main__":

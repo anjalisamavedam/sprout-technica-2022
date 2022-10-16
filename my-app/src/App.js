@@ -21,6 +21,7 @@ function App() {
           <Route path='/mentee' element={<Mentee/>}></Route>
           <Route path='/mentor' element={<Mentor/>}></Route>
           <Route path='/internship' element={<Internship/>}></Route>
+          <Route path='/matching' element={<Matching/>}></Route>
         </Routes>
       </Router>
 

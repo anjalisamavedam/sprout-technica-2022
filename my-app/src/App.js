@@ -9,8 +9,7 @@ function App() {
     <div className="App">
        <Navbar />
       <Router>
-        <Link to="/internship">Internship</Link>
-        
+
         <Routes>
             <Route path='/' element={<App />}></Route>
             <Route path='/internship' element={<Internship />}></Route>

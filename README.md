@@ -1,5 +1,7 @@
 ## 🌱 sprout 🌱
 
+Check out our project submission for Technica 2022 at: https://devpost.com/software/sprout-xv7aor
+
 ## Inspiration 🌱
 Sprout (Supporting Professionals in Reaching Our Underrepresented Talents) was created with the intention of fostering a tight-knit community among underrepresented people of the technology industry. Surpassing differences in age, job experience, and life standing, Sprout aims to squash impostor syndrome among college grads by empowering them with the financial literacy and professional confidence to carry them throughout their early adulthood. In connecting established industry professionals with emerging technologists, we aim to provide mentors and retired professionals with opportunities to engage in the field through awareness of part time roles within the industry. 
 

@@ -2,10 +2,11 @@ import { PieChart } from 'react-minimal-pie-chart'
 import './JobCard.css'
 
 const JobCard = (props) => {
+  
   return (
     <div className='jobcard'>
-      <p><strong>Position:</strong> {props.position}, <strong>Company:</strong> {props.company}</p>
-      <p><strong>Position description:</strong> {props.description}</p>
+      <p>{props.position}, {props.company}</p>
+      <p>Position description: {props.description}</p>
       <div className='demographics'>
 
         <PieChart className='piechart'
@@ -14,6 +15,9 @@ const JobCard = (props) => {
             { title: 'Two', value: 15, color: '#C13C37' },
             { title: 'Three', value: 20, color: '#6A2135' },
           ]}
+          label={(labelRenderProps: LabelRenderProps) =>
+            number | string | React.ReactElement | undefined | null
+          }
         />
         <p className='percentage'>48% of employees at {props.company} are women.</p>
 

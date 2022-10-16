@@ -11,17 +11,18 @@
 }
 
 .piechart {
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   padding: 10px;
+  
 }
 
 .demographics {
   text-align: left;
   display: flex;
-  vertical-align: center;
 }
 
-.percentage{
-  vertical-align: center;
+.percentage {
+  margin-top: 30px;
+  margin-left: 10px;
 }

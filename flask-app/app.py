@@ -3,13 +3,23 @@ from careerjet_api_client import CareerjetAPIClient
 from flask_pymongo import PyMongo
 import json
 from flask_cors import CORS, cross_origin
+import os
 
-
+# twilio
+from twilio.rest import Client
+from twilio.base.exceptions import TwilioRestException
 
 app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/db"
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
+
+account_sid = os.environ.get("ACCOUNT_SID")
+auth_token = os.environ.get("AUTH_TOKEN")
+twilio_number = "+16695872010"
+
+
+client = Client(account_sid, auth_token)
 
 
 mongo = PyMongo(app)
@@ -117,6 +127,10 @@ def match(mentee, email):
 
     
     if match_profile:
+        mentee_name = ""
+        mentor_name = ""
+        mentee_phone = ""
+        mentor_phone = ""
         if mentee:
             new_profile = profile
             new_profile['matched'] = True
@@ -124,9 +138,28 @@ def match(mentee, email):
             new_profile['mentor_phone'] = match_profile['phoneNumber']
 
             mongo.db.mentees.update_one(
-                profile,
+                {
+                    'email': profile['email']
+                },
                 { "$set": new_profile}
             )
+
+            mentor_profile = match_profile
+            mentor_profile['matched'] = True
+            mentor_profile['mentee_name'] = profile['name']
+            mentor_profile['mentee_phone'] = profile['phoneNumber']
+
+            mongo.db.mentors.update_one(
+                {
+                    'email': match_profile['email']
+                },
+                { "$set": mentor_profile}
+            )
+
+            mentee_phone = profile['phoneNumber']
+            mentee_name = profile['name']
+            mentor_phone = match_profile['phoneNumber']
+            mentor_name = match_profile['name']
 
         else:
             new_profile = profile
@@ -135,9 +168,45 @@ def match(mentee, email):
             new_profile['mentee_phone'] = match_profile['phoneNumber']
 
             mongo.db.mentors.update_one(
-                profile,
+                {
+                    'email': profile['email']
+                },
                 { "$set": new_profile}
             )
+
+            mentee_profile = match_profile
+            mentee_profile['matched'] = True
+            mentee_profile['mentor_name'] = profile['name']
+            mentee_profile['mentor_phone'] = profile['phoneNumber']
+
+            mongo.db.mentees.update_one(
+                {
+                    'email': match_profile['email']
+                },
+                { "$set": mentee_profile}
+            )
+
+            mentee_phone = profile['phoneNumber']
+            mentee_name = profile['name']
+            mentor_phone = match_profile['phoneNumber']
+            mentor_name = match_profile['name']
+
+
+        try:
+          # This could potentially throw an exception!
+            message1 = client.messages.create(
+                to=str(mentor_phone), 
+                from_=twilio_number,
+                body=f"You have been matched with a mentee!\nHere is their information:\nName: {mentee_name}\nPhone Number: {mentee_phone}")
+
+            message2 = client.messages.create(
+                to=str(mentee_phone), 
+                from_=twilio_number,
+                body=f"You have been matched with a mentor!\nHere is their information:\nName: {mentor_name}\nPhone Number: {mentor_phone}")
+
+        except TwilioRestException as err:
+          # Implement your fallback code here
+          print(err)
 
         return { 
             "status": "ok",
@@ -148,7 +217,7 @@ def match(mentee, email):
         
         }
     
-    return { "status": "match not found"}
+    return { "status": "match not found", "match": "none"}
 
 
 if __name__ == "__main__":

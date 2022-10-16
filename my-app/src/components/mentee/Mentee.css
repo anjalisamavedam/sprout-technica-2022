@@ -15,9 +15,24 @@
 .carousel-card {
   word-wrap: break-word;
   width: 300px;
-  border: 1px solid #9f8f71;
   border-radius: 25px;
   padding: 10px;
   background-color: #9f8f7150;
   text-align: center;
+}
+
+.internship-blurb {
+  width: 900px;
+  margin-left: 16%;
+}
+
+.filter {
+  background-color: #9f8f7150;
+  border: #9f8f71;
+  color: #9f8f71;
+  border-radius: 25px;
+  height: 30px;
+  width: 80px;
+  padding: 5px;
+  margin-left: 10px;
 }

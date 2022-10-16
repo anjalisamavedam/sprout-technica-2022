@@ -6,7 +6,7 @@ function Navbar() {
         <div>
             <nav>
                 <ul id="navbar">
-                    <li>sprout</li>
+                    <li><a href="../home">sprout</a></li>
                 </ul>
 
                 <div>

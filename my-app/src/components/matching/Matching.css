@@ -31,7 +31,7 @@ input[type=text] {
     text-align: left;
     padding: 30px;
     border-radius: 7%;
-    height: 600px;
+    height: 650px;
     margin: 30px;
     margin-left: 21%;
 
@@ -55,5 +55,6 @@ input[type=submit] {
     margin-top: 20px;
     margin-left: 85%;
     background-color: #9f8f7150;
-    
+    right: 10px;
+    bottom: 10px;
 }

@@ -6,6 +6,7 @@ import './Mentee.css'
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import HousingForm from './HousingForm';
 
 const responsive = {
   superLargeDesktop: {
@@ -77,6 +78,10 @@ const Mentee = memo((props) => {
 
       <br/>
       <br/>
+
+      <div>
+        <HousingForm />
+      </div>
 
       <div className='jobs'>
         <h1>Internships</h1>

@@ -1,3 +1,13 @@
 import React from 'react';
-import HousingForm from './HousingForm'
 
+
+const Housing = (props) => {
+    return(
+        <div>
+            <h1>Here are your results!</h1>
+            <p>{props.result}</p>
+        </div>
+    );
+}
+
+export default Housing

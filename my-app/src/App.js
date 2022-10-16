@@ -1,5 +1,6 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './App.css';
+import Navbar from './components/navbar/Navbar';
 
 import Internship from './components/internship/Internship';
 
@@ -13,6 +14,7 @@ function App() {
       </Router>
        <a href="/internship">Internship</a> 
 
+      <Navbar/>
 
     </div>
   );

@@ -14,6 +14,7 @@ function Navbar(){
                     <li><a href="../mentor">Mentor</a></li>
                     <li><a href="../mentee">Mentee</a></li>
                     <li><a href="../internship">Internship</a></li>
+                    <li><a href="../matching">Matching</a></li>
                </ul>
 
            </div>

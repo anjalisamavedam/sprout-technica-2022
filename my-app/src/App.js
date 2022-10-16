@@ -4,7 +4,6 @@ import Navbar from './components/navbar/Navbar';
 
 import Mentee from './components/mentee/Mentee';
 import Mentor from './components/mentor/Mentor';
-import Internship from './components/internship/Internship';
 
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
           <Route path='/' element={<App/>}></Route>
           <Route path='/mentee' element={<Mentee/>}></Route>
           <Route path='/mentor' element={<Mentor/>}></Route>
-          <Route path='/internship' element={<Internship/>}></Route>
         </Routes>
       </Router>
 

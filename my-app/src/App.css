@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Cutive+Mono&family=Marcellus&family=Satisfy&display=swap');
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,49 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.missionStatement{
+  padding:20px;
+  align-items:center;
+  position:absolute;
+  top: 15vh;
+  bottom: 0;
+  left: 0;
+  right:0; 
+}
+
+h3{
+  font-family: 'Satisfy', cursive;
+  font-size: 3vh;
+  text-align:center;
+}
+
+h3, missionStatement{
+  font-size:5rem;
+  padding-left:10vw;
+}
+
+img{
+  height:55vh;
+  width:50vw;
+  display:inline-block;
+}
+
+missionStatement, squash, image{
+  padding-left:10vw;
+  padding-right:10vw;
+}
+
+p{
+  padding:5vh;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1.3rem;
+  color:#9f8f71;
+  padding-left:10vw;
+  padding-right:10vw;
+}
+
+.squash{
+  padding-top:10vh;
 }

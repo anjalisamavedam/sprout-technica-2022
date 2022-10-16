@@ -1,5 +1,6 @@
 import React from 'react';
 import Matched from './Matched'
+import './Matching.css'
 
 class MatchingForm extends React.Component {
     constructor(props) {
@@ -122,10 +123,10 @@ class MatchingForm extends React.Component {
                 <div class="formcontainer">
                     <div class="title">Matching Form</div>
                     <form onSubmit={this.handleSubmit}>
-                        <div> 
-                            <label>Role: </label>
+                        <div className="role"> 
+                            <label className='role-label'>Role: </label>
                             <input type="radio" name="role" value="mentor" onChange={this.  setRole}/>
-                            <label>Mentor</label>
+                            <label className='role-label'>Mentor</label>
                             <input type="radio" name="role" value="mentee" onChange={this.  setRole}/> 
                             <label>Mentee</label>
                         </div>
@@ -158,7 +159,7 @@ class MatchingForm extends React.Component {
                         <div> Interests: 
                           <input type="text" value={this.state.interests} onChange={this.   setInterests} />
                         </div>
-                        <input type="submit" value="Submit" />
+                        <div className='submit'><input type="submit" value="Submit" /></div>
                     </form>
                 </div>
 

@@ -35,6 +35,9 @@ const Mentee = memo((props) => {
 
       <div className='finlit'>
         <h1>Let's learn about finances.</h1>
+
+        <br/>
+
         <Carousel responsive={responsive}>
 
           <div className='carousel-card'>

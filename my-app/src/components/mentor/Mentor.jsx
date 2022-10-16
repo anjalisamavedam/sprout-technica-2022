@@ -35,6 +35,7 @@ const Mentor = memo((props) => {
       <div className='finlit'>
 
         <h1>Why is mentorship in tech so important?</h1>
+        <br/>
 
         <Carousel responsive={responsive}>
 
@@ -49,18 +50,18 @@ const Mentor = memo((props) => {
           </div>
 
           <div className='carousel-card'>
-            <h3>Tech work is broad and varied.</h3>
-            <p>You might find individual contributor roles bring less joy as your career progresses, so you take a foray into management — only to work back toward individual contributors after learning that leading people isn’t your cup of tea.</p>
+            <h3>Is mentoring worth my time?</h3>
+            <p>Tech work is broad and varied. You might find individual contributor roles bring less joy as your career progresses, so you take a foray into management — only to work back toward individual contributors after learning that leading people isn’t your cup of tea.</p>
           </div>
 
           <div className='carousel-card'>
-            <h3>Hard topics we must discuss.</h3>
-            <p>No matter your industry, it’s common to face burnout. The tech industry, however, typically comprises a wide range of company sizes, but is known for its industry-disrupting startups. </p>
+            <h3>What if I'm tired of working?</h3>
+            <p>No matter your industry, it’s common to face burnout. The tech industry, however, typically comprises a wide range of company sizes, but is known for its industry-disrupting startups. There will always be companies out there with a pace that will fit your current season of life. </p>
           </div>
                     
           <div className='carousel-card'>
-            <h3>The tech industry is fast-paced.</h3>
-            <p>Mentors can help ensure mentees are continuously learning over time and keeping skills relevant by sharing tips and valuable resources, and by making sure they understand it’s impossible to know everything. </p>
+            <h3>Can I provide value in fast-paced industry?</h3>
+            <p>Mentors, more than anyone else, are individuals who have faced the ebbs and flows of the economy and changing demands of their industry. They can help mentees continuously learn and keep skills relevant, and normalize the fact that it's impossible to know everything all the time. </p>
           </div>
 
         </Carousel>

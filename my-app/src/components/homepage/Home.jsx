@@ -19,7 +19,7 @@ function Home() {
       <br/>
 
       <div className="squash">
-        <h3 className="imposter-syndrome"><i>Squash</i> Imposter Syndrome</h3>
+        <h3 className="imposter-syndrome">✨<i>Squash</i> Imposter Syndrome✨</h3>
         <img className="squash-img" src={image1} alt="squash" height={100} width={100}></img>
 
       </div>

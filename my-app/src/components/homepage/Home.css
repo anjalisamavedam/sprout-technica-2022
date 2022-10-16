@@ -2,61 +2,54 @@
   padding:20px;
   align-items:center;
   position:absolute;
-  top: 15vh;
+  top: 9vh;
   bottom: 0;
   left: 0;
   right:0; 
-  padding-left:10vw;
-  padding-right:10vw;
 }
   
 .claim {
   font-size:5rem;
   font-family: 'Satisfy', cursive;
-  font-size: 3vh;
   text-align:center;
   padding-top:8vh;
-  padding-left: 5vh;
+  padding-left:14vw;
   font-size:4rem;
   color: #544f54;
 }
-  
-.squash{
-  padding-left:10vw;
-  padding-right:10vw;
-}
+
 
 .pot {
   height:55vh;
   width:50vw;
   display:inline-block;
-  padding-left:10vw;
+  padding-left:10;
   padding-right:10vw;
 }
   
 .slogan {
-  padding:5vh;
   font-family: 'Cutive Mono', monospace;
   font-size: 1.5rem;
   color:#9f8f71;
   padding-left:10vw;
   padding-right:10vw;
+  text-align:center;
 }
   
 .imposter-syndrome {
   font-size: 13vh;
-  padding-top: 32vh;
+  padding-top: 70vh;
   font-family: 'Satisfy', cursive;
   text-align: center;
-  padding-top: 8vh;
   padding-left: 5vh;
   font-size: 4rem;
   color: #544f54;
 }
 
 .squash-img {
-  padding-top:20px;
+  padding-top:0px;
   text-align:center;
-  padding-left:10vw;
-  padding-right:10vw;
+  width:50vw;
+  height:60vh;
+  padding-left:50vw;
 }

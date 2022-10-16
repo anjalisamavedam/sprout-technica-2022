@@ -129,7 +129,9 @@ class MatchingForm extends React.Component {
                             <label>Name: </label>
                             <input type="text" value={this.state.name} onChange={this.setName} />
                         </div>
-
+                        <div> Pronouns: 
+                          <input type="text" value={this.state.pronouns} onChange={this.    setPronouns} />
+                        </div>
                         <div> 
                             <label>Location: </label>
                             <input type="text" value={this.state.location} onChange={this.  setLocation} />
@@ -142,9 +144,7 @@ class MatchingForm extends React.Component {
                             <label>Job: </label>
                             <input type="text" value={this.state.job} onChange={this.setJob} />
                         </div>
-                        <div> Pronouns: 
-                          <input type="text" value={this.state.pronouns} onChange={this.    setPronouns} />
-                        </div>
+                        
                         <div> Email: 
                           <input type="text" value={this.state.email} onChange={this.setEmail} />
                         </div>

@@ -7,10 +7,10 @@ const Internship = () => {
 
     const jobs = {
         items: [
-            { position: "Business Analyst Intern", company: "my company", link: "apple", desc: "testing" },
-            { position: "Software Engineer Intern", company: "veg", link: "carrot", desc: "testing" },
-            { position: "", company: "veg", link: "carrot", desc: "testing" },
-            { position: "", company: "veg", link: "carrot", desc: "testing" },
+            { position: "Business Analyst Intern", company: "my company", description: "testing" },
+            { position: "Software Engineer Intern", company: "veg", description: "testing" },
+            { position: "", company: "veg", description: "testing" },
+            { position: "", company: "veg", description: "testing" },
 
         ]
     };

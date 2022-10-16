@@ -81,11 +81,13 @@ const Mentee = memo((props) => {
 
       <div className='housing'>
         <h1>Affordable Housing</h1>
+        <h3>Fill out this form to find out how likely you are to be approved for a home loan and tips for getting closer to buying a home!</h3>
         <HousingForm />
       </div>
 
       <div className='jobs'>
         <h1>Internships</h1>
+        <h3>You are not alone in the industry!</h3>
 
         <SearchBar />
 

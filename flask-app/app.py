@@ -302,7 +302,7 @@ def housingEval():
         # maybe
         else:
             eval = 3
-            toReturn.append("You may or may not be approved to secure a home load at this time with a favorable interest rate. We encourage you to take time to reorganize your finances and better understand opportunities for improvement.")
+            toReturn.append("You may or may not be approved to secure a home loan at this time with a favorable interest rate. We encourage you to take time to reorganize your finances and better understand opportunities for improvement.")
 
         result_json = json.dumps(toReturn)
 

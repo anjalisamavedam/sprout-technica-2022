@@ -71,7 +71,7 @@ def add_user():
             }
             
             mongo.db.mentors.insert_one(mentor)
-            match_profile= match(mentor, data["email"])
+            match_profile= match(False, data["email"])
 
         elif data["role"] == "mentee":
             mentee = {
@@ -87,7 +87,8 @@ def add_user():
 
             mongo.db.mentees.insert_one(mentee)
 
-            match_profile= match(mentee, data["email"])
+            match_profile= match(True, data["email"])
+
 
         if match_profile:
             return match_profile

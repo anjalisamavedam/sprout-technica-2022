@@ -99,14 +99,18 @@ class MatchingForm extends React.Component {
 
         this.setMatched()
         
+        
         console.log(this.state)
         event.preventDefault();
     }
 
     render() {
         if (this.state.matched) {
+            if (this.state.profile == "none") {
+                return (<Matched message="not found"/>);
+            }
             if (this.state.role == "mentee"){
-                return (<Matched role="mentor" name={this.state.profile.name} phoneNumber={this.state.profile.phone}/>);
+                return (<Matched message="found" role="mentor" name={this.state.profile.name} phoneNumber={this.state.profile.phone}/>);
             } else {
                 return (<Matched role="mentee" name={this.state.profile.name} phoneNumber={this.state.profile.phone}/>);
             }

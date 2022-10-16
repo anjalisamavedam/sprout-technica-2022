@@ -4,8 +4,8 @@ import './JobCard.css'
 const JobCard = (props) => {
   return (
     <div className='jobcard'>
-      <p><strong>Position:</strong> {props.position}, <strong>Company:</strong> {props.company}</p>
-      <p><strong>Position description:</strong> {props.description}</p>
+      <p>{props.position}, {props.company}</p>
+      <p>Position description: {props.description}</p>
       <div className='demographics'>
 
         <PieChart className='piechart'
@@ -15,7 +15,7 @@ const JobCard = (props) => {
             { title: 'Three', value: 20, color: '#6A2135' },
           ]}
         />
-        <p>48% of employees at {props.company} are women.</p>
+        <p className='percentage'>48% of employees at {props.company} are women.</p>
 
       </div>
 

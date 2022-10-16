@@ -94,7 +94,7 @@ class MatchingForm extends React.Component {
                 "job": this.state.job
             })
         };
-        fetch('http://127.0.0.1:5000/add_user', requestOptions)
+        fetch('https://sprout--backend.herokuapp.com/add_user', requestOptions)
             .then(response => response.json())
             .then(data => this.setProfile(data["match"]));
 

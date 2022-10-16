@@ -89,7 +89,7 @@ class HousingForm extends React.Component {
                 "creditScore": this.state.creditScore
             })
         };
-        fetch('http://127.0.0.1:5000/housing', requestOptions)
+        fetch('https://sprout--backend.herokuapp.com/housing', requestOptions)
             .then(response => response.json())
             .then(data => this.setResult(data["result"]));
 

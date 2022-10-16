@@ -89,7 +89,7 @@ const Mentee = memo((props) => {
 
       <div className='jobs'>
         <h1>Internship Opportunities</h1>
-        <p className="internship-blurb">It can be hard getting started with your early career, while finding a good work community that makes you feel welcome and included for just being you. Let us match you with internship opportunities, local and far, in a variety of fields, and with different levels of exprience, to give you a head start. Select the filters you wish so we can best fit you with the perfect internship! </p>
+        <p className="internship-blurb">It can be hard getting started with your early career, while finding a good work community that makes you feel welcome and included for just being you. Let us match you with internship opportunities, local and far, in a variety of fields, and with different levels of exprience, to give you a head start. Select the filters you wish so that we can best fit you with the perfect internship! </p>
 
         <div>
           <SearchBar />

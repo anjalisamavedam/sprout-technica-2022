@@ -74,8 +74,12 @@ const Mentor = memo((props) => {
 
       <div className='jobs'>
         <h1>Part-Time Roles</h1>
+        <p className="parttime-blurb">Think that you're done with working full-time? Ready to leave the workforce and retire for good? Hold onto your hats (and your resignation forms)! Our society is in great need of experienced individuals like you. Having climbed up the career ladder and learned lots along the way, you not only have much to contribute to your company and industry, but you have the ability to make an impact on an individual entering their early-career. Mentorships are a great way to pour into the new generation, but you can also do your "part" by working "part"-time; letting your company off slower while helping onboard new employees to their job and their career. Select the filters you wish so that we can best fit you with the perfect part-time role!</p>
 
-        <SearchBar />
+        <div>
+          <SearchBar />
+          <button className="filter">Filter ▼</button>
+        </div>
 
         <JobCard 
           position="Technical Support Specialist" 

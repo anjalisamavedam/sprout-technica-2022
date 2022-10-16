@@ -1,11 +1,14 @@
 import "./Navbar.css";
-// import image from '../img/sproutLogo.PNG';
+import React from 'react';
+
+import logo from './apple-icon.png';
 
 function Navbar() {
     return (
         <div>
             <nav>
                 <ul id="navbar">
+                    <li><img className="logo" src={logo}/></li>
                     <li><a href="../home">sprout</a></li>
                 </ul>
 

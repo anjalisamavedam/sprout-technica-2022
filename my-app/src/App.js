@@ -21,6 +21,11 @@ function App() {
         </Routes>
       </Router>
 
+      <div className="footer">
+        <br/>
+        <p className="footertext">Technica 2023 Project: Sprout</p>
+      </div>
+
     </div>
   );
 }

@@ -8,10 +8,12 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          {/* <Route path='/' exact element={<App/>}></Route> */}
           <Route path='/internship' element={<Internship/>}></Route>
         </Routes>
       </Router>
+      <a href="/internship">Internship</a>
+
+
     </div>
   );
 }

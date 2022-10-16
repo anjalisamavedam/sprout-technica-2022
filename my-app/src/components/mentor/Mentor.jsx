@@ -69,9 +69,75 @@ const Mentor = memo((props) => {
 
         <SearchBar />
 
-        <JobCard position="Software Engineering Intern" company="Capital One" description="ifhioefhoeifneiofowh" />
-        <JobCard position="Product Management Intern" company="Bank of America" description="feihwfoiwehfoiwehfowiho" />
-        <JobCard position="Software Development Intern" company="Appian" description="foihgiohwegiwhi" />
+        <JobCard 
+          position="Technical Support Specialist" 
+          company="AARP" 
+          description="Help-desk technicians often work for support service firms that contract with clients that don't have the financial resources to afford their own IT departments. Lower-level tech support jobs can be found in call centers." 
+          maj={45} min={55} cat="45% of AARP employees work part time."
+        />
+        
+        <JobCard 
+          position="Web Search Evaluator" 
+          company="Zoom" 
+          description="A web search evaluator is a professional who analyzes search engine results to ensure accuracy and relevance. Web search evaluators make informed decisions to rate websites, webpages, videos, images, maps and other search results according to a KPI (key performance indicator) scale." 
+          maj={33} min={67} cat="33% of Zoom employees work part time."
+        />
+        
+        <JobCard 
+          position="Digital Marketing Specialist" 
+          company="Hewlett-Packard" 
+          description="Digital marketing specialists plan digital marketing campaigns across multiple channels, create and publish written and visual content to support marketing initiatives, optimize their marketing funnels to improve performance, and communicate their results to company leaders." 
+          maj={22} min={78} cat="22% of Hewlett-Packard employees work part time."
+        />
+        
+        <JobCard 
+          position="Technical Writer" 
+          company="Oracle" 
+          description="Technical writers, also called technical communicators, prepare instruction manuals, how-to guides, journal articles, and other supporting documents to communicate complex and technical information more easily" 
+          maj={14} min={86} cat="14% of Oracle employees work part time."
+        />
+        
+        <JobCard 
+          position="Senior Software Engineer - AWS" 
+          company="Amazon" 
+          description="Amazon is seeking a Senior Software Engineer to join our engineering team. As a Senior Software Engineer at AWS, you’ll drive the development of the systems behind Amazon's products, create web applications that reach billions of people, and build high volume servers." 
+          maj={43} min={57} cat="43% of Amazon employees work part time."
+        />
+        
+        <JobCard 
+          position=".Net Developer" 
+          company="Twitter" 
+          description="NET developers” are best defined more generally as a type of web programmer with a strong understanding of the . NET framework who is responsible for creating a variety of online software, applications, development and interfaces." 
+          maj={64} min={36} cat="64% of Twitter employees work part time."
+        />
+        
+        <JobCard 
+          position="Architect Senior - Enterprise Architect" 
+          company="IBM" 
+          description="Senior enterprise architects are responsible for the overall design of an organization's technology systems. They work with a variety of different departments to determine how best to implement new technologies and improve existing ones." 
+          maj={32} min={68} cat="32% of IBM employees work part time."
+        />
+        
+        <JobCard 
+          position="Senior Network Engineer" 
+          company="Meta" 
+          description="Senior Network Engineers design and create computer networks within an organization in order to ensure their IT systems are working both safely and correctly. Depending on the nature of the business, they may also be required to do the same for third-party clients." 
+          maj={34} min={66} cat="34% of Meta employees work part time."
+        />
+        
+        <JobCard 
+          position="Program Manager" 
+          company="Cisco" 
+          description="Image result for Program Manager Program managers take the long view of a company initiative, planning how to implement an overarching vision. Project managers, by contrast, take the short view, focusing on carrying out specific activities that drive a program forward." 
+          maj={12} min={88} cat="12% of Cisco employees work part time."
+        />
+        
+        <JobCard 
+          position="Senior Developer, Data Integration" 
+          company="Intel" 
+          description="An Integration Developer is responsible for the complete life cycle of information systems, from requirements and analysis to design and development. They do so by studying data sources and data models and then planning solutions before delivering integrations." 
+          maj={23} min={77} cat="23% of Intel employees work part time."
+       />
 
       </div>
 

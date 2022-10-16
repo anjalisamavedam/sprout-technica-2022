@@ -30,10 +30,11 @@ const responsive = {
 const Mentor = memo((props) => {
   return (
     <div className='mentor'>
+      <h1 className='header'>Mentor</h1>
 
       <div className='finlit'>
 
-        <h1>Why mentorship in tech is important.</h1>
+        <h1>Why is mentorship in tech so important?</h1>
 
         <Carousel responsive={responsive}>
 
@@ -66,6 +67,7 @@ const Mentor = memo((props) => {
 
       </div>
 
+      <br/>
       <br/>
       <br/>
 

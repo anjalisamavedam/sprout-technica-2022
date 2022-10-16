@@ -1,9 +1,23 @@
 .mentor {
-  text-align: left;
+  text-align: center;
   margin-top: 50px;
   margin-left: 62px;
 
   font-family: 'Cutive Mono', monospace;
   font-size: 1.3rem;
   color:#9f8f71;
+}
+
+.header {
+  font-size: 80px;
+}
+
+.carousel-card {
+  word-wrap: break-word;
+  width: 300px;
+  border: 1px solid #9f8f71;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: #cbbaa450;
+  text-align: center;
 }

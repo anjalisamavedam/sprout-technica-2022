@@ -8,6 +8,9 @@
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 30px;
+  background-color: #cbbaa450;
+  margin-bottom: 50px;
+  margin-left: 15%;
 }
 
 .piechart {
@@ -20,9 +23,31 @@
 .demographics {
   text-align: left;
   display: flex;
+  position: relative;
 }
 
 .percentage {
   margin-top: 30px;
+  margin-left: 10px;
+  width: 650px;
+}
+
+.apply {
+  background-color: #dba66e50;
+  border: 1px solid #dba66e;
+  padding: 12px 20px;
+  text-align: center;
+  padding-top: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #dba66e;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1.3rem;
+  align-self: right;
+  position: absolute;
+  border-radius: 25px;
+  height: 30px;
+  bottom: 10px;
+  right: 5px;
   margin-left: 10px;
 }

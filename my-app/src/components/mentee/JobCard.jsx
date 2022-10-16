@@ -5,8 +5,11 @@ const JobCard = (props) => {
 
   return (
     <div className='jobcard'>
+      
       <p>{props.position}, {props.company}</p>
       <p>Position description: {props.description}</p>
+      
+      
       <div className='demographics'>
 
         <PieChart className='piechart'
@@ -18,10 +21,11 @@ const JobCard = (props) => {
 
         <p className='percentage'>{props.cat}</p>
 
-        <button className="apply">Apply</button>
+        <a target="_blank" href="https://www.linkedin.com/jobs/zoom-intern-jobs/?currentJobId=3303886575" class="apply"><strong>Apply</strong></a>
 
       </div>
 
+      
 
 
     </div>

@@ -5,8 +5,11 @@ import './Internship.css'
 
 const Internship = memo(() => {
   return (
-    <div class="container">
-        <SearchBar />
+    <div className='internships'>
+      <h1>Internships</h1>
+      
+      <SearchBar />
+
       <JobCard position="Software Engineering Intern" company="Capital One" description="ifhioefhoeifneiofowh"/>
       <JobCard position="Product Management Intern" company="Bank of America" description="feihwfoiwehfoiwehfowiho"/>
       <JobCard position="Software Development Intern" company="Appian" description="foihgiohwegiwhi"/>

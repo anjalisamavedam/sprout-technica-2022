@@ -10,10 +10,10 @@ function Navbar(){
 
            <div>
                <ul id="navbar">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="index.html">Mentor</a></li>
-                    <li><a href="index.html">Mentee</a></li>
-
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../mentor">Mentor</a></li>
+                    <li><a href="../mentee">Mentee</a></li>
+                    <li><a href="../internship">Internship</a></li>
                </ul>
 
            </div>

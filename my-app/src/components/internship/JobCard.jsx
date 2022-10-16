@@ -1,12 +1,11 @@
-import React, { memo } from 'react'
 import { PieChart } from 'react-minimal-pie-chart'
 import './JobCard.css'
 
-const JobCard = memo(() => {
+const JobCard = (props) => {
   return (
     <div className='jobcard'>
-      <h2>Position, Company</h2>
-      <p>Position description</p>
+      <p><strong>Position:</strong> {props.position}, <strong>Company:</strong> {props.company}</p>
+      <p><strong>Position description:</strong> {props.description}</p>
       <PieChart className='pie-chart'
         data={[
           { title: 'One', value: 10, color: '#E38627' },
@@ -19,6 +18,6 @@ const JobCard = memo(() => {
 
     </div>
   )
-})
+}
 
 export default JobCard

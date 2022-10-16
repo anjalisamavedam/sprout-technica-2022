@@ -50,7 +50,7 @@ class MatchingForm extends React.Component {
 
     render() {
         return (
-            <div class="container">
+            <div class="formcontainer">
                 <div class="title">Matching Form</div>
                 <form onSubmit={this.handleSubmit}>
                     <div> 

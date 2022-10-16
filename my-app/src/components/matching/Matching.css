@@ -5,7 +5,7 @@ input[type=text] {
     
 }
 
-.container {
+.formcontainer {
     border: solid 1px;
     width: 50%;
     text-align: left;

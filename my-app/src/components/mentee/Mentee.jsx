@@ -11,6 +11,12 @@ const Mentee = memo((props) => {
     <div className='mentee'>
       <h1>Mentee</h1>
 
+      <div className='finlit'>
+
+
+
+      </div>
+
       <div className='jobs'>
         <h1>Internships</h1>
 

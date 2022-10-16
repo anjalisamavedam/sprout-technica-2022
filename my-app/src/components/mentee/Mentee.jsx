@@ -87,7 +87,6 @@ const Mentee = memo((props) => {
 
       <div className='jobs'>
         <h1>Internships</h1>
-        <h3>You are not alone in the industry!</h3>
 
         <SearchBar />
 

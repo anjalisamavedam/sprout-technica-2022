@@ -2,7 +2,6 @@ import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import './App.css';
 
 import Navbar from './components/navbar/Navbar';
-
 import Mentee from './components/mentee/Mentee';
 import Mentor from './components/mentor/Mentor';
 import Matching from './components/matching/Matching';

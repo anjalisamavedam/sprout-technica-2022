@@ -1,3 +1,8 @@
+.matching {
+    text-align: left;
+    margin-left: 50px;
+}
+
 input[type=text] {
     border-color: lightgray;
     border: solid 1px;

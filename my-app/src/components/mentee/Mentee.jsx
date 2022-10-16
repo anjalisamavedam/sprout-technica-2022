@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React, { memo } from 'react'
 import SearchBar from './SearchBar'
 import JobCard from './JobCard'
-import './Internship.css'
+import './Jobs.css'
 
 import './Mentee.css'
 
@@ -11,7 +11,7 @@ const Mentee = memo((props) => {
     <div className='mentee'>
       <h1>Mentee</h1>
 
-      <div className='internships'>
+      <div className='jobs'>
         <h1>Internships</h1>
 
         <SearchBar />

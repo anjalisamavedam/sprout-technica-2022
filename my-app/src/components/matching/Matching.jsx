@@ -4,7 +4,9 @@ import './Matching.css'
 
 const Matching = () => {
     return (
-        <div>
+        <div className='matching'>
+            <h1>Matching</h1>
+
             <MatchingForm />
         </div>
     );

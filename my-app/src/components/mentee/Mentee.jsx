@@ -79,7 +79,8 @@ const Mentee = memo((props) => {
       <br/>
       <br/>
 
-      <div>
+      <div className='housing'>
+        <h1>Affordable Housing</h1>
         <HousingForm />
       </div>
 

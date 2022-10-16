@@ -38,7 +38,7 @@
   
 .imposter-syndrome {
   font-size: 13vh;
-  padding-top: 70vh;
+  padding-top: 30vh;
   font-family: 'Satisfy', cursive;
   text-align: center;
   padding-left: 5vh;
@@ -52,4 +52,35 @@
   width:50vw;
   height:60vh;
   padding-left:50vw;
+}
+
+.headshot-rows {
+  display: flex;
+  padding-top: 10vh;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1.3rem;
+  color:#9f8f71;
+  text-align: center;
+  margin-left: 14%;
+
+}
+
+.headshot-div {
+  margin-right: 50px;
+}
+
+.headshot {
+  height: 200px;
+  border-radius: 50%;
+}
+
+.team {
+  font-size: 13vh;
+  padding-top: 60vh;
+  font-family: 'Satisfy', cursive;
+  text-align: center;
+  padding-left: 5vh;
+  font-size: 4rem;
+  color: #544f54;
+
 }

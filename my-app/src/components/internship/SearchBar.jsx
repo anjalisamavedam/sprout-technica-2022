@@ -6,7 +6,7 @@ const Search = ({ onChange }) => {
       className={styles.search}
       type="text"
       onChange={onChange}
-      placeholder="search"
+      placeholder="keyword search"
     />
   );
 };

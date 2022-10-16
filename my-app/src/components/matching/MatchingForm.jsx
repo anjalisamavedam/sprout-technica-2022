@@ -15,12 +15,32 @@ class MatchingForm extends React.Component {
             interests: ''
         };
 
-        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.setName = this.setName.bind(this);
+        this.setLocation = this.setLocation.bind(this);
+        this.setCareerArea = this.setCareerArea.bind(this);
+        this.setPronouns = this.setPronouns.bind(this);
+        this.setEmail = this.setEmail.bind(this);
     }
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
+    setName(event) {
+        this.setState({name: event.target.value});
+    }
+
+    setLocation(event) {
+        this.setState({location: event.target.value})
+    }
+
+    setCareerArea(event) {
+        this.setState({careerArea: event.target.value})
+    }
+
+    setPronouns(event) {
+        this.setState({pronouns: event.target.value})
+    }
+
+    setEmail(event) {
+        this.setState({email: event.target.value})
     }
 
     handleSubmit(event) {
@@ -30,24 +50,31 @@ class MatchingForm extends React.Component {
 
     render() {
         return (
-          <form onSubmit={this.handleSubmit}>
-            <div> Name: 
-              <input type="text" value={this.state.name} onChange={this.handleChange} />
+            <div class="container">
+                <div class="title">Matching Form</div>
+                <form onSubmit={this.handleSubmit}>
+                    <div> 
+                        <label>Name: </label>
+                        <input type="text" value={this.state.name} onChange={this.setName} />
+                    </div>
+                    <div> 
+                        <label>Location: </label>
+                        <input type="text" value={this.state.location} onChange={this.setLocation} />
+                    </div>
+                    <div> 
+                        <label>Career Area: </label>
+                        <input type="text" value={this.state.careerArea} onChange={this.setCareerArea} />
+                    </div>
+                    <div> Pronouns: 
+                      <input type="text" value={this.state.pronouns} onChange={this.setPronouns} />
+                    </div>
+                    <div> Email: 
+                      <input type="text" value={this.state.email} onChange={this.setEmail} />
+                    </div>
+                    <input type="submit" value="Submit" />
+                </form>
             </div>
-            <div> Location: 
-              <input type="text" value={this.state.location} onChange={this.handleChange} />
-            </div>
-            <div> CareerArea: 
-              <input type="text" value={this.state.careerArea} onChange={this.handleChange} />
-            </div>
-            <div> Pronouns: 
-              <input type="text" value={this.state.pronouns} onChange={this.handleChange} />
-            </div>
-            <div> Email: 
-              <input type="text" value={this.state.email} onChange={this.handleChange} />
-            </div>
-            <input type="submit" value="Submit" />
-          </form>
+          
         );
     }
 }

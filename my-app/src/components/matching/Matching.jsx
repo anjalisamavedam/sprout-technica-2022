@@ -1,5 +1,6 @@
 import React from 'react';
 import MatchingForm from './MatchingForm';
+import './Matching.css'
 
 const Matching = () => {
     return (

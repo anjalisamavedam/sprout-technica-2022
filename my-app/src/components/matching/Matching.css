@@ -1,0 +1,18 @@
+input[type=text] {
+    border-color: lightgray;
+    border: solid 1px;
+    margin: 20px;
+    
+}
+
+.container {
+    border: solid 1px;
+    width: 50%;
+    text-align: left;
+    padding: 30px;
+    border-radius: 7%;
+    height: 500px;
+    margin: 30px;
+
+}
+

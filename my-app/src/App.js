@@ -10,11 +10,11 @@ function App() {
        <Navbar />
       <Router>
         <Routes>
-            <Route path='/' element={<App/>}></Route>
-            <Route path='/internship' element={<Internship/>}></Route>
+            <Route path='/' element={<App />}></Route>
+            <Route path='/internship' element={<Internship />}></Route>
         </Routes>
       </Router>
-       <a href="/internship">Internship</a> 
+
 
 
     </div>

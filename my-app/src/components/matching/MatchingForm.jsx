@@ -22,10 +22,15 @@ class MatchingForm extends React.Component {
     render() {
         return (
           <form onSubmit={this.handleSubmit}>
-            <label>
-              Name:
+            <div> Name:
               <input type="text" value={this.state.value} onChange={this.handleChange} />
-            </label>
+            </div>
+            <div> Location:
+              <input type="text" value={this.state.value} onChange={this.handleChange} />
+            </div>
+            <div> Location:
+              <input type="text" value={this.state.value} onChange={this.handleChange} />
+            </div>
             <input type="submit" value="Submit" />
           </form>
         );

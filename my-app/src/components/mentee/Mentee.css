@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Cutive+Mono&family=Marcellus&family=Satisfy&display=swap');
 .mentee {
   text-align: left;
   margin-top: 50px;
@@ -17,6 +18,14 @@
   word-wrap: break-word;
   width: 300px;
   border: 1px solid #9f8f71;;
-  padding: 10px;
+  padding: 20px;
+  border-radius: 25px;
+}
 
+.carousel-card h3{
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.carousel-card p{
+  font-family: 'Cutive Mono', monospace;
 }

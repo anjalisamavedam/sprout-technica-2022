@@ -1,0 +1,15 @@
+.jobcard {
+  border: 1px black solid;
+  width: 800px;
+  text-align: left;
+  padding: 20px;
+}
+
+.piechart {
+  height: 70px;
+}
+
+.demographics {
+  text-align: left;
+  display: block;
+}

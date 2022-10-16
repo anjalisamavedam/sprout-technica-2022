@@ -1,6 +1,7 @@
 .mentee {
   text-align: left;
-  margin-left: 50px;
+  margin-top: 50px;
+  margin-left: 62px;
 }
 
 .finlit {
@@ -9,6 +10,9 @@
 }
 
 .carousel-card {
+  word-wrap: break-word;
+  width: 300px;
+  border: 1px solid;
+  padding: 10px;
 
-  
 }

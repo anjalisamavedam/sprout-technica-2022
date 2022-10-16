@@ -1,5 +1,5 @@
 .matching {
-    text-align: left;
+    text-align: center;
     margin-top: 50px;
     margin-left: 62px;
 
@@ -7,6 +7,10 @@
     font-size: 1.3rem;
     color:#9f8f71;
 }
+
+.header {
+    font-size: 80px;
+  }
 
 input[type=text] {
     border-color: lightgray;
@@ -23,6 +27,7 @@ input[type=text] {
     border-radius: 7%;
     height: 600px;
     margin: 30px;
+    margin-left: 21%;
 
 }
 

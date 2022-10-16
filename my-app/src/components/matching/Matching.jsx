@@ -5,7 +5,7 @@ import './Matching.css'
 const Matching = () => {
     return (
         <div className='matching'>
-            <h1>Matching</h1>
+            <h1 className='header'>Matching</h1>
 
             <MatchingForm />
         </div>

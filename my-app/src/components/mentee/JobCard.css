@@ -1,5 +1,5 @@
 .jobcard {
-  border: 1px black solid;
+  border: 1px solid #9f8f71;
   border-radius: 25px;
   width: 800px;
   text-align: left;
@@ -7,7 +7,7 @@
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .piechart {
